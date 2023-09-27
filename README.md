@@ -9,16 +9,15 @@ The template is documented at https://pascalmichaillat.org/d4/.
 ## Features
 
 + The font on the axes and for the annotations is Helvetica.
-+ No colors are used on the axes to reduce distraction; colors are reserved for plot elements and annotations.
-+ Figure dimensions are set to maximize the use of space.
-+ The figure aspect ratio is 4:3 so the figure can easily be annotated with a presentation software.
 + Font sizes and line thicknesses are set for comfortable reading once the figures are inserted [in pairs in a paper](https://github.com/pmichaillat/latex-paper).
-+ A collections of color palettes are provided, both for qualitative displays and sequential displays. The palettes were created by [ColorBrewer](https://github.com/axismaps/colorbrewer).
++ A collection of color palettes is provided, both for qualitative displays and sequential displays. The palettes were created by [ColorBrewer](https://github.com/axismaps/colorbrewer).
 + The template produces a collection of figures with different plot types and different features:
 	* Time series plots: single or multiple series, with or without period areas, with or without above-below areas
 	* Scatter plots: connected or not, with or without above-below areas
-+ The figures produced by the template are available in PDF format in the `figures` folder.
++ Figure dimensions are set to maximize the use of space.
++ The figure aspect ratio is 4:3 so the figure can easily be annotated with a presentation software.
 + On a Mac, the figures can easily be annotated with Keynote. This procedure is more user friendly, and more flexible, than annotating the figures directly in MATLAB. The Keynote file `figures.key` illustrates how to annotate the figures produced by the template.
++ The figures produced by the template are available in PDF format in the `figures` folder.
 + The file `figures.pdf` illustrates the output of the figure template.
 
 ## Usage
