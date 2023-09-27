@@ -17,6 +17,7 @@
 % * above_below.pdf – Figure with colored areas to indicate that a time series is below or above a target
 % * higher_lower.pdf – Figure with two time series and colored areas to indicate that a time series is higher or lower than the other
 % * scatter.pdf – Figure with basic scatter plot
+% * scatter_transparent.pdf – Figure with scatter plot of transparent dots
 % * scatter_connected.pdf – Figure with scatter plot of connected dots
 % * scatter_above_below.pdf – Figure with a scatter plot and different dot colors to indicate that the observations are above or below a treshold
 %
@@ -225,12 +226,12 @@ data3 = (data1+data2)./2;
 clear obj
 obj.Color = orangeColor;
 obj.LineWidth = 3;
-obj.LineStyle = '--';
+obj.LineStyle = '-.';
 orangeLine = [fieldnames(obj), struct2cell(obj)]';
 clear obj
 obj.Color = greenColor;
 obj.LineWidth = 3;
-obj.LineStyle = ':';
+obj.LineStyle = '--';
 greenLine = [fieldnames(obj), struct2cell(obj)]';
 
 % Open figure 
@@ -441,8 +442,7 @@ yAxis = [fieldnames(obj), struct2cell(obj)]';
 % Predefine properties for scatter dots
 clear obj
 obj.LineWidth = 1;
-obj.LineStyle = 'none';
-obj.MarkerSize = 10;
+obj.SizeData = 100;
 obj.MarkerFaceColor = purpleColor;
 obj.MarkerEdgeColor = purpleColor;
 obj.Marker = 'o';
@@ -455,7 +455,7 @@ clf
 hold on
 
 % Plot data
-plot(data7, data8, purpleDot{:})
+scatter(data7, data8, purpleDot{:})
 
 %Populate axes
 set(gca, xAxis{:}, yAxis{:})
@@ -464,6 +464,35 @@ ylabel('Data B')
 
 %Print figure
 print('-dpdf', 'scatter.pdf')
+
+%% Create a scatter plot with transparent dots
+
+% Predefine properties for scatter dots
+clear obj
+obj.LineWidth = 1;
+obj.SizeData = 100;
+obj.MarkerFaceColor = purpleColor;
+obj.MarkerEdgeColor = purpleColor;
+obj.Marker = 'o';
+obj.MarkerFaceAlpha = 0.4;
+transparentDot = [fieldnames(obj), struct2cell(obj)]';
+
+% Open figure 
+iFigure = iFigure + 1;
+figure(iFigure)
+clf
+hold on
+
+% Plot data
+scatter(data7, data8, transparentDot{:})
+
+%Populate axes
+set(gca, xAxis{:}, yAxis{:})
+xlabel('Data A')
+ylabel('Data B')
+
+%Print figure
+print('-dpdf', 'scatter_transparent.pdf')
 
 %% Create a scatter plot with connected dots
 
@@ -505,8 +534,7 @@ print('-dpdf', 'scatter_connected.pdf')
 % Predefine properties for high scatter dots
 clear obj
 obj.LineWidth = 1;
-obj.LineStyle = 'none';
-obj.MarkerSize = 10;
+obj.SizeData = 100;
 obj.MarkerFaceColor = greenColor;
 obj.MarkerEdgeColor = greenColor;
 obj.Marker = 'o';
@@ -515,8 +543,7 @@ greenDot = [fieldnames(obj), struct2cell(obj)]';
 % Predefine properties for low scatter dots
 clear obj
 obj.LineWidth = 1;
-obj.LineStyle = 'none';
-obj.MarkerSize = 10;
+obj.SizeData = 100;
 obj.MarkerFaceColor = pinkColor;
 obj.MarkerEdgeColor = pinkColor;
 obj.Marker = 'o';
@@ -533,10 +560,10 @@ high = [data8 > data7];
 low = [data8 < data7];
 
 % Plot high data
-plot(data7(high), data8(high), greenDot{:})
+scatter(data7(high), data8(high), greenDot{:})
 
 % Plot low data
-plot(data7(low), data8(low), pinkDot{:})
+scatter(data7(low), data8(low), pinkDot{:})
 
 % Plot separating line
 plot([0:0.01:1], [0:0.01:1], thinLine{:})
