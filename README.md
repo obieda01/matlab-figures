@@ -6,7 +6,7 @@ This repository contains a [MATLAB](hhttps://matlab.mathworks.com) template to c
 
 The template is documented at https://pascalmichaillat.org/d4/.
 
-### Features
+## Features
 
 + The figure aspect ratio is 4:3 so the figure can easily be annotated with a presentation software.
 + The font on the axes and for the annotations is Helvetica.
