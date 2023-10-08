@@ -1,6 +1,6 @@
-# Minimalist MATLAB Template for Scientific Figures
+# MATLAB Template for Scientific Figures
 
-This repository contains a MATLAB template to create scientific figures. The template carefully follows data visualization best practices and has a minimalist design.
+This repository contains a MATLAB template to create scientific figures. The template carefully follows [data visualization best practices](https://www.edwardtufte.com/tufte/books_vdqi).
 
 ## Documentation
 
