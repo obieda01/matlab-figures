@@ -23,8 +23,8 @@ The script is documented at https://pascalmichaillat.org/d4/.
 
 + Clone the repository to your local machine.
 + Open the repository with MATLAB.
-+ Run `publish('minimalistFigure.m')` in MATLAB to generate an HTML page at `html/minimalistFigure.html` in the repository. The page can be opened in any web browser. It displays the MATLAB code and its output. This is the best way to see the figures produced by the script, and to experiment with the script.
-+ Use any part of the script defined in `minimalistFigure.m` to produce figures for your project.
++ Run `publish('figures.m')` in MATLAB to generate an HTML page at `html/figures.html` in the repository. The page can be opened in any web browser. It displays the MATLAB code and its output. This is the best way to see the figures produced by the script, and to experiment with the script.
++ Use any part of the script defined in `figures.m` to produce figures for your project.
 + On a Mac, the figures can easily be annotated with Keynote. This procedure is more user friendly, and more flexible, than annotating the figures directly in MATLAB. The Keynote file `figures.key` illustrates how to annotate the figures produced by the script. The main step is to insert the image produced by MATLAB as a background to the slide using `Image Fill` with the option `Scale to Fill`.
 + The `figures.key` file can then be exported as a PDF file so the figures can be used elsewhere. The `figures.pdf` file is obtained by exporting `figures.key`.
 

@@ -1,10 +1,10 @@
-%% minimalistFigure.m
+%% figures.m
 % 
-% Produce minimalist figures
+% Produce scientific figures
 %
 %% Description
 %
-% This script produces a collection of minimalist figure that carefully follow data vizualization best practices.
+% This script produces a collection of scientific figure that carefully follow data vizualization best practices.
 %
 %% Output
 %
