@@ -1,0 +1,3 @@
+[submodule "matlab-figures"]
+	path = matlab-figures
+	url = https://github.com/obieda01/matlab-figures.git
